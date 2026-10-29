@@ -1,0 +1,44 @@
+{
+  "name": "@protokol11/pi-session-search-lite",
+  "version": "0.1.0",
+  "description": "One session_search tool over the local SQLite index of past pi sessions: read-only FTS5 trigram/BM25 queries plus a bounded index pass.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protokol11/agent-governance.git",
+    "directory": "npm/pi-session-search-lite"
+  },
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "agent-governance",
+    "session-search",
+    "sqlite",
+    "fts5",
+    "bm25"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test extensions/test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "tsx": "^4.19.0",
+    "typescript": "^7.0.2"
+  }
+}

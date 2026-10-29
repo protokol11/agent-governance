@@ -1,0 +1,44 @@
+{
+  "name": "@protokol11/pi-setup-upgrade",
+  "version": "0.1.0",
+  "description": "Dry-run reconciler for pi: classifies repository files against the principles-render stamp — ok / missing / user-modified — without writing.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protokol11/agent-governance.git",
+    "directory": "npm/pi-setup-upgrade"
+  },
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "agent-governance",
+    "setup-repo",
+    "upgrade-repo",
+    "reconciler",
+    "dry-run"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test extensions/test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "tsx": "^4.19.0",
+    "typescript": "^7.0.2"
+  }
+}

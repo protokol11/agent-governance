@@ -46,12 +46,15 @@ agent intent ──▶ typed gate (measure / judge / escalate) ──▶ pass �
 | `extensions/` | `rule-lifecycle` | Rule changes are versioned and pass a gate instead of drifting silently |
 | `extensions/` | `parity-meter` | Measures a session (tool-schema snapshots, protocol errors, usage per turn); the meter never changes arguments, never stops a call |
 | `extensions/` | `todo-state` | Thin TS layer over the verified Python todo core; one fold, one source of truth, drift caution against `.docs/PLAN.md` |
+| `extensions/` | `ask` | Structured human input: one `ask` tool opening a TUI questionnaire, answers come back as text, malformed arguments rejected before any UI opens |
+| `extensions/` | `session-search-lite` | One `session_search` tool over the local SQLite index of past sessions, ranked by BM25 |
 | `extensions/` | `context-memory` | Rule detector appends one reminder section; every turn logs a decision line so non-fires stay auditable |
 | `lifecycle/` | `session-transfer` | Replaces lossy compaction with a handoff + in-place rotation (`/transfer`, `/transfer-resume`) |
 | `lifecycle/` | `session-manager` | Agent names its own session via `name_session` (verb-led kebab-slug) |
 | `orchestration/` | `conductor` | Run/ralph commands, role gates, tester profile, run-state restore |
 | `orchestration/` | `orchestration-graph` | Parent-facing ops and diagnostics for the dispatch graph; nothing model-facing |
 | `extras/` | `paste` | F4 saves a clipboard screenshot and swaps placeholders for real attachments on send |
+| `extras/` | `setup-upgrade` | Dry-run reconciler: classifies repo files against the principles-render stamp (`ok` / `missing` / `user-modified`) |
 | `extras/` | `cost` | Session-cost view (signs, rates, age) over pi session files — `/yuan`, `/yen`, `/usd` |
 | root | `rlcd-local` | Registers a local Python RLCD sidecar classifier (`cell-coder-1.5b`) for System One requests |
 | `npm/` | `pi-judgment` | npm-packaged judgment extension: judge tool, ledger, reliability curve, scope-lock gate with dual-judge review |
@@ -67,6 +70,16 @@ Wave-1 extensions are additionally published as individual repos and npm package
 | `session-manager` | [protokol11/pi-session-manager](https://github.com/protokol11/pi-session-manager) | [`@protokol11/pi-session-manager`](https://www.npmjs.com/package/@protokol11/pi-session-manager) |
 | `memory-gov` | [protokol11/pi-memory-gov](https://github.com/protokol11/pi-memory-gov) | [`@protokol11/pi-memory-gov`](https://www.npmjs.com/package/@protokol11/pi-memory-gov) |
 | `todo-state` | [protokol11/pi-todo-state](https://github.com/protokol11/pi-todo-state) | [`@protokol11/pi-todo-state`](https://www.npmjs.com/package/@protokol11/pi-todo-state) |
+
+Wave 2:
+
+| Extension | Standalone repo | npm package |
+|---|---|---|
+| `cost` (renamed from `yuan`) | [protokol11/pi-cost](https://github.com/protokol11/pi-cost) | [`@protokol11/pi-cost`](https://www.npmjs.com/package/@protokol11/pi-cost) |
+| `ask` | [protokol11/pi-ask](https://github.com/protokol11/pi-ask) | [`@protokol11/pi-ask`](https://www.npmjs.com/package/@protokol11/pi-ask) |
+| `session-search-lite` | [protokol11/pi-session-search-lite](https://github.com/protokol11/pi-session-search-lite) | [`@protokol11/pi-session-search-lite`](https://www.npmjs.com/package/@protokol11/pi-session-search-lite) |
+| `setup-upgrade` | [protokol11/pi-setup-upgrade](https://github.com/protokol11/pi-setup-upgrade) | [`@protokol11/pi-setup-upgrade`](https://www.npmjs.com/package/@protokol11/pi-setup-upgrade) |
+| deep-research skill + agent-directory | [protokol11/pi-deep-research](https://github.com/protokol11/pi-deep-research) | [`@protokol11/pi-deep-research`](https://www.npmjs.com/package/@protokol11/pi-deep-research) |
 
 ### The pipeline these extensions serve
 

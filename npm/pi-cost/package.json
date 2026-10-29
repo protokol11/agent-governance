@@ -1,0 +1,44 @@
+{
+  "name": "@protokol11/pi-cost",
+  "version": "0.1.0",
+  "description": "Multi-currency session cost footer for pi: /yuan, /yen, /usd over OpenRouter session history, user-set rates, one shared cache.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protokol11/agent-governance.git",
+    "directory": "npm/pi-cost"
+  },
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "agent-governance",
+    "cost",
+    "footer",
+    "openrouter",
+    "multi-currency"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test extensions/test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "tsx": "^4.19.0",
+    "typescript": "^7.0.2"
+  }
+}

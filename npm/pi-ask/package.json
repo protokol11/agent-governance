@@ -1,0 +1,44 @@
+{
+  "name": "@protokol11/pi-ask",
+  "version": "0.1.0",
+  "description": "Structured human input for pi agents: one ask tool opening a TUI questionnaire — choice list for one question, tab bar plus Submit tab for several — with argument linting before any UI opens.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protokol11/agent-governance.git",
+    "directory": "npm/pi-ask"
+  },
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "agent-governance",
+    "ask",
+    "questionnaire",
+    "tui",
+    "human-in-the-loop"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test extensions/test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "tsx": "^4.19.0",
+    "typescript": "^7.0.2"
+  }
+}
