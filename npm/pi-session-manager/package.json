@@ -1,6 +1,6 @@
 {
   "name": "@protokol11/pi-session-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verb-led kebab-slug session names plus a Windows-Explorer-style browser over the pi session store.",
   "license": "MIT",
   "repository": {

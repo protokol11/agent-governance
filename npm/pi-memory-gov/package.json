@@ -1,6 +1,6 @@
 {
   "name": "@protokol11/pi-memory-gov",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Memory capture and recall for pi agents, where trust comes from calibrated judgments, not model self-assessment.",
   "license": "MIT",
   "repository": {

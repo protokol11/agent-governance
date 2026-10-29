@@ -1,6 +1,6 @@
 {
   "name": "@protokol11/pi-todo-state",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Append-only, concurrency-safe todo board for pi sessions: event log plus deterministic fold.",
   "license": "MIT",
   "repository": {

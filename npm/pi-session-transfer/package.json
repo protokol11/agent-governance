@@ -1,6 +1,6 @@
 {
   "name": "@protokol11/pi-session-transfer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lossy context compaction replaced with a typed handoff document and session rotation for pi agents.",
   "license": "MIT",
   "repository": {
