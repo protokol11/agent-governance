@@ -81,6 +81,13 @@ Wave 2:
 | `setup-upgrade` | [protokol11/pi-setup-upgrade](https://github.com/protokol11/pi-setup-upgrade) | [`@protokol11/pi-setup-upgrade`](https://www.npmjs.com/package/@protokol11/pi-setup-upgrade) |
 | deep-research skill + agent-directory | [protokol11/pi-deep-research](https://github.com/protokol11/pi-deep-research) | [`@protokol11/pi-deep-research`](https://www.npmjs.com/package/@protokol11/pi-deep-research) |
 
+Wave 3:
+
+| Extension | Standalone repo | npm package |
+|---|---|---|
+| `orchestration-graph` | [protokol11/pi-orchestration-graph](https://github.com/protokol11/pi-orchestration-graph) | [`@protokol11/pi-orchestration-graph`](https://www.npmjs.com/package/@protokol11/pi-orchestration-graph) |
+| `paste` | [protokol11/pi-paste](https://github.com/protokol11/pi-paste) | [`@protokol11/pi-paste`](https://www.npmjs.com/package/@protokol11/pi-paste) |
+
 ### The pipeline these extensions serve
 
 The author runs a fixed skeleton; the extensions above wrap it with runtime gates:
