@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"types": ["node"]
+	},
+	"include": ["index.ts", "runner.ts", "types.ts", "chains.ts", "state.ts", "artifacts.ts", "dashboard.ts", "report.ts", "commands.ts", "role-gate.ts", "junction-check.ts", "ralph/types.ts", "ralph/state.ts", "ralph/loop.ts", "ralph/planner.ts", "ralph/tdd.ts", "ralph/notify.ts", "ralph/commands.ts"]
+}

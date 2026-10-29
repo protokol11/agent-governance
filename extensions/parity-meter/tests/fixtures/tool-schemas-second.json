@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-23T11:00:00.000Z",
+  "tools": [
+    {
+      "name": "read",
+      "parameters": {
+        "type": "object",
+        "properties": {"path": {"type": "string"}},
+        "required": ["path"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "edit",
+      "parameters": {
+        "type": "object",
+        "properties": {"path": {"type": "string"}, "edits": {"type": "array"}},
+        "required": ["path", "edits"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "write",
+      "parameters": {
+        "type": "object",
+        "properties": {"path": {"type": "string"}, "content": {"type": "string"}},
+        "required": ["path", "content"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "subagent_supervisor",
+      "parameters": {
+        "type": "object",
+        "properties": {"prompt": {"type": "string"}},
+        "required": ["prompt"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "rules_version": 2,
+  "session_id": "11111111-2222-3333-4444-555555555555",
+  "session_file": "2026-10-23T10-00-00_11111111-2222-3333-4444-555555555555.jsonl",
+  "provider": "kimi-for-coding",
+  "model": "kimi-k2",
+  "thinking": "high",
+  "req": 2,
+  "avg_input": 1200.5,
+  "avg_cache_read": 40000,
+  "avg_output": 340.25,
+  "reasoning": 120,
+  "reasoning_share": 0.176342,
+  "cost_total": 0.42,
+  "cost_cache_share": 0.71,
+  "cost_output_share": 0.2,
+  "protocol_errors": {
+    "total": 2,
+    "tool_name_not_in_schema": 1,
+    "args_fail_schema": 0,
+    "repeat_read_unchanged": 1
+  },
+  "tool_seq_sha": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "tool_seq_len": 7,
+  "parse_errors": 0,
+  "attribution": "full",
+  "schema_snapshot": true,
+  "schema_basis": "snapshot-current",
+  "emitted_at": "2026-10-23T12:00:00.000Z"
+}

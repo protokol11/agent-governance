@@ -1,0 +1,6 @@
+{
+  "name": "pi-ext-paste",
+  "private": true,
+  "type": "module",
+  "description": "F4 paste-screenshot: clipboard image -> tmp/paste placeholder -> attachment"
+}

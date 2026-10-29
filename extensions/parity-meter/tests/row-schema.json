@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parity-meter/row.schema.json",
+  "title": "parity-meter ledger row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "rules_version",
+    "session_id",
+    "session_file",
+    "provider",
+    "model",
+    "thinking",
+    "req",
+    "avg_input",
+    "avg_cache_read",
+    "avg_output",
+    "reasoning",
+    "reasoning_share",
+    "cost_total",
+    "cost_cache_share",
+    "cost_output_share",
+    "protocol_errors",
+    "tool_seq_sha",
+    "tool_seq_len",
+    "parse_errors",
+    "attribution",
+    "schema_snapshot",
+    "schema_basis",
+    "emitted_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "rules_version": {
+      "type": "integer",
+      "const": 2
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "thinking": {
+      "type": "string",
+      "minLength": 1
+    },
+    "req": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "avg_input": {
+      "type": "number",
+      "minimum": 0
+    },
+    "avg_cache_read": {
+      "type": "number",
+      "minimum": 0
+    },
+    "avg_output": {
+      "type": "number",
+      "minimum": 0
+    },
+    "reasoning": {
+      "type": "number",
+      "minimum": 0
+    },
+    "reasoning_share": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "cost_total": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cost_cache_share": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "cost_output_share": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "protocol_errors": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "total",
+            "tool_name_not_in_schema",
+            "args_fail_schema",
+            "repeat_read_unchanged"
+          ],
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tool_name_not_in_schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "args_fail_schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "repeat_read_unchanged": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
+    },
+    "tool_seq_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "tool_seq_len": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "parse_errors": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "full",
+        "partial",
+        "unknown"
+      ]
+    },
+    "schema_snapshot": {
+      "type": "boolean"
+    },
+    "schema_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "emitted_at": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

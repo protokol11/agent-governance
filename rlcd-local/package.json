@@ -1,0 +1,15 @@
+{
+	"name": "rlcd-local-extension",
+	"private": true,
+	"type": "module",
+	"devDependencies": {
+		"@earendil-works/pi-ai": "1.0.2",
+		"@earendil-works/pi-coding-agent": "1.0.2",
+		"@types/node": "^26.1.1",
+		"typescript": "^7.0.2"
+	},
+	"scripts": {
+		"typecheck": "npx tsc --noEmit",
+		"test": "node --experimental-strip-types test-logic.ts"
+	}
+}

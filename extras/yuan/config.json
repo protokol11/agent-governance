@@ -1,0 +1,25 @@
+{
+  "rate": 6.71,
+  "jpy": 157.8,
+  "view": {
+    "yuan": {
+      "session": true,
+      "month": true,
+      "all": false
+    },
+    "yen": {
+      "session": false,
+      "month": false,
+      "all": false
+    },
+    "usd": {
+      "session": false,
+      "month": false,
+      "all": false
+    }
+  },
+  "signs": {
+    "yuan": "¥",
+    "yen": "JP¥"
+  }
+}
