@@ -1,0 +1,5 @@
+{
+  "name": "todo-state-extension",
+  "private": true,
+  "type": "module"
+}
