@@ -56,6 +56,18 @@ agent intent ──▶ typed gate (measure / judge / escalate) ──▶ pass �
 | root | `rlcd-local` | Registers a local Python RLCD sidecar classifier (`cell-coder-1.5b`) for System One requests |
 | `npm/` | `pi-judgment` | npm-packaged judgment extension: judge tool, ledger, reliability curve, scope-lock gate with dual-judge review |
 
+### Standalone repos and npm packages (wave 1)
+
+Wave-1 extensions are additionally published as individual repos and npm packages; the sources of truth stay in this monorepo.
+
+| Extension | Standalone repo | npm package |
+|---|---|---|
+| `judgment` | — (monorepo only, for now) | [`@protokol11/pi-judgment`](https://www.npmjs.com/package/@protokol11/pi-judgment) |
+| `session-transfer` | [protokol11/pi-session-transfer](https://github.com/protokol11/pi-session-transfer) | [`@protokol11/pi-session-transfer`](https://www.npmjs.com/package/@protokol11/pi-session-transfer) |
+| `session-manager` | [protokol11/pi-session-manager](https://github.com/protokol11/pi-session-manager) | [`@protokol11/pi-session-manager`](https://www.npmjs.com/package/@protokol11/pi-session-manager) |
+| `memory-gov` | [protokol11/pi-memory-gov](https://github.com/protokol11/pi-memory-gov) | [`@protokol11/pi-memory-gov`](https://www.npmjs.com/package/@protokol11/pi-memory-gov) |
+| `todo-state` | [protokol11/pi-todo-state](https://github.com/protokol11/pi-todo-state) | [`@protokol11/pi-todo-state`](https://www.npmjs.com/package/@protokol11/pi-todo-state) |
+
 ### The pipeline these extensions serve
 
 The author runs a fixed skeleton; the extensions above wrap it with runtime gates:
