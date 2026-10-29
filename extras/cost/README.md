@@ -1,8 +1,8 @@
-# yuan
+# cost
 
 Multi-currency cost footer for pi sessions: `/yuan`, `/yen`, `/usd` over OpenRouter session history.
 
-yuan is a pi extension. It scans `~/.pi/agent/sessions`, totals per-session, month, and all-time cost in USD, and renders it in CNY, JPY, or USD — in the terminal on demand and as a persistent footer block owned by the `ctx262` extension.
+cost is a pi extension (renamed from `yuan`). It scans `~/.pi/agent/sessions`, totals per-session, month, and all-time cost in USD, and renders it in CNY, JPY, or USD — in the terminal on demand and as a persistent footer block owned by the `ctx262` extension.
 
 ## Table of contents
 
@@ -22,7 +22,7 @@ Cost visibility should not depend on one currency. The pipeline treats cost repo
 
 The harder lesson is ownership. On 2026-09-14 two extensions both called `ctx.ui.setFooter` — pi resolves that as last-one-wins, and one footer silently clobbered the other. The fix was a single owner: `ctx262.ts` renders the footer; this extension registers the commands and exposes `renderCostBlock` / `loadFooterSettings` from `core.ts`, which `ctx262` imports. The principle holds anywhere a shared resource has more than one writer: one owner, explicit imports, no side-effect writes from a second party. This incident is closed.
 
-The extension is planned to be renamed from `yuan` to `cost`; the three commands stay as they are.
+The extension was renamed from `yuan` to `cost` before its first publication; the three commands stay as they are.
 
 **Scope:** per-session, month, and all-time cost in three currencies; footer block composition; user-set rates with a 10-minute cache.
 
@@ -39,10 +39,10 @@ The extension is planned to be renamed from `yuan` to `cost`; the three commands
 Copy this directory into the pi extensions folder:
 
 ```sh
-cp -r extras/yuan ~/.pi/agent/extensions/yuan
+cp -r extras/cost ~/.pi/agent/extensions/cost
 ```
 
-Expected: `~/.pi/agent/extensions/yuan` contains `index.ts`, `core.ts`, and a `config.json` created on first run (default CNY rate 6.7, JPY 157.8).
+Expected: `~/.pi/agent/extensions/cost` contains `index.ts`, `core.ts`, and a `config.json` created on first run (default CNY rate 6.7, JPY 157.8).
 
 ## Usage
 
@@ -104,7 +104,7 @@ Other exports cover the full seam: `loadRate` / `saveRate`, `loadJpyRate` / `sav
 
 ## Contributing
 
-File issues in the parent monorepo (`protokol11/agent-governance`), `extras/yuan`. Run the tests with:
+File issues in the parent monorepo (`protokol11/agent-governance`), `extras/cost`. Run the tests with:
 
 ```sh
 node --test test/*.test.mjs

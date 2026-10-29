@@ -52,7 +52,7 @@ agent intent ──▶ typed gate (measure / judge / escalate) ──▶ pass �
 | `orchestration/` | `conductor` | Run/ralph commands, role gates, tester profile, run-state restore |
 | `orchestration/` | `orchestration-graph` | Parent-facing ops and diagnostics for the dispatch graph; nothing model-facing |
 | `extras/` | `paste` | F4 saves a clipboard screenshot and swaps placeholders for real attachments on send |
-| `extras/` | `yuan` | Session-cost view (signs, rates, age) over pi session files |
+| `extras/` | `cost` | Session-cost view (signs, rates, age) over pi session files — `/yuan`, `/yen`, `/usd` |
 | root | `rlcd-local` | Registers a local Python RLCD sidecar classifier (`cell-coder-1.5b`) for System One requests |
 | `npm/` | `pi-judgment` | npm-packaged judgment extension: judge tool, ledger, reliability curve, scope-lock gate with dual-judge review |
 
