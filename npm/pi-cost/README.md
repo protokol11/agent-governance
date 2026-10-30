@@ -1,4 +1,5 @@
 # cost
+npm package: [`@protokol11/pi-cost`](https://www.npmjs.com/package/@protokol11/pi-cost). Source of truth: [agent-governance](https://github.com/protokol11/agent-governance) monorepo.
 
 Multi-currency cost footer for pi sessions: `/yuan`, `/yen`, `/usd` over OpenRouter session history.
 
@@ -33,6 +34,20 @@ The extension was renamed from `yuan` to `cost` before its first publication; th
 - Node.js 24+ (runs `.ts` directly via type stripping).
 - pi with OpenRouter sessions under `~/.pi/agent/sessions`.
 - The `ctx262` extension, which owns the footer and imports from this `core.ts`.
+
+## Quick start
+
+```sh
+npm install @protokol11/pi-cost
+```
+
+Or from a clone of this repo:
+
+```sh
+cp -r pi-cost ~/.pi/agent/extensions/pi-cost
+```
+
+Details below.
 
 ## Install
 

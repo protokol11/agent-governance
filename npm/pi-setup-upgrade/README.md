@@ -1,4 +1,5 @@
 # setup-upgrade
+npm package: [`@protokol11/pi-setup-upgrade`](https://www.npmjs.com/package/@protokol11/pi-setup-upgrade). Source of truth: [agent-governance](https://github.com/protokol11/agent-governance) monorepo.
 
 Dry-run reconciler: classifies repository files against the principles-render stamp.
 
@@ -42,6 +43,20 @@ No verdict path writes. The extension reports; the person reading decides.
 7. The command prints a header, then one line per path: the verdict padded to 13 characters, then the path.
 
 **What it writes on disk:** nothing in the repository. The only writes are the two renderer output trees in the OS temp directory, and they are deleted before the command returns. Reading `.agentic/manifest.json` never creates or updates it.
+
+## Quick start
+
+```sh
+npm install @protokol11/pi-setup-upgrade
+```
+
+Or from a clone of this repo:
+
+```sh
+cp -r pi-setup-upgrade ~/.pi/agent/extensions/pi-setup-upgrade
+```
+
+Details below.
 
 ## Install
 

@@ -1,4 +1,5 @@
 # pi-ext-paste
+npm package: [`@protokol11/pi-paste`](https://www.npmjs.com/package/@protokol11/pi-paste). Source of truth: [agent-governance](https://github.com/protokol11/agent-governance) monorepo.
 
 F4 paste-screenshot: clipboard image -> tmp/paste placeholder -> attachment
 
@@ -36,6 +37,20 @@ machine.
 - Windows with PowerShell (clipboard access uses
   `System.Windows.Forms.Clipboard` via `powershell -NoProfile`).
 - Pi coding agent (`@earendil-works/pi-coding-agent`) installed and running.
+
+## Quick start
+
+```sh
+npm install @protokol11/pi-paste
+```
+
+Or from a clone of this repo:
+
+```sh
+cp -r pi-paste ~/.pi/agent/extensions/pi-paste
+```
+
+Details below.
 
 ## Install
 
