@@ -1,7 +1,7 @@
 {
   "name": "@protokol11/pi-cost",
   "version": "0.1.0",
-  "description": "Multi-currency session cost footer for pi: /yuan, /yen, /usd over OpenRouter session history, user-set rates, one shared cache.",
+  "description": "Multi-currency session cost footer for pi: /yuan, /yen, /usd over pi session history (any provider whose session entries carry usage.cost), user-set rates, one shared cache.",
   "license": "MIT",
   "repository": {
     "type": "git",

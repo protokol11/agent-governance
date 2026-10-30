@@ -1,8 +1,8 @@
 # cost
 
-Multi-currency cost footer for pi sessions: `/yuan`, `/yen`, `/usd` over OpenRouter session history.
+Multi-currency cost footer for pi sessions: `/yuan`, `/yen`, `/usd` over pi session history.
 
-cost is a pi extension (renamed from `yuan`). It scans `~/.pi/agent/sessions`, totals per-session, month, and all-time cost in USD, and renders it in CNY, JPY, or USD — in the terminal on demand and as a persistent footer block owned by the `ctx262` extension.
+cost is a pi extension (renamed from `yuan`). It scans `~/.pi/agent/sessions`, totals per-session, month, and all-time cost in USD, and renders it in CNY, JPY, or USD — in the terminal on demand and as a persistent footer block owned by the `ctx262` extension. Cost comes from the `usage.cost.total` field that pi writes into every session entry, so any provider works: OpenRouter, or any other provider whose session entries carry cost. Entries without a cost field count as 0.
 
 ## Table of contents
 
@@ -26,12 +26,12 @@ The extension was renamed from `yuan` to `cost` before its first publication; th
 
 **Scope:** per-session, month, and all-time cost in three currencies; footer block composition; user-set rates with a 10-minute cache.
 
-**Non-scope:** fetching live exchange rates, non-OpenRouter billing, per-model or per-day breakdowns.
+**Non-scope:** fetching live exchange rates, per-provider billing APIs, per-model or per-day breakdowns.
 
 ## Prerequisites
 
 - Node.js 24+ (runs `.ts` directly via type stripping).
-- pi with OpenRouter sessions under `~/.pi/agent/sessions`.
+- pi with session files under `~/.pi/agent/sessions` that carry `usage.cost.total` (any provider; entries without cost count as 0).
 - The `ctx262` extension, which owns the footer and imports from this `core.ts`.
 
 ## Install
@@ -99,7 +99,7 @@ Other exports cover the full seam: `loadRate` / `saveRate`, `loadJpyRate` / `sav
 ## Troubleshooting
 
 - **Symptom:** footer shows no cost figures. **Cause:** all view flags hidden, or the cache is stale and no command has refreshed it. **Fix:** `/yuan session view | month view | all view`, then `/yuan fresh`.
-- **Symptom:** `/usd set 1` warns "USD is the base currency". **Cause:** USD totals come from OpenRouter and need no conversion. **Fix:** nothing to set; use `/yuan set` or `/yen set`.
+- **Symptom:** `/usd set 1` warns "USD is the base currency". **Cause:** USD totals come from the session usage data and need no conversion. **Fix:** nothing to set; use `/yuan set` or `/yen set`.
 - **Symptom:** footer and command disagree. **Cause:** the footer reads the cache while the command shows cache age with its figures. **Fix:** `/yuan fresh` on both sides.
 
 ## Contributing
